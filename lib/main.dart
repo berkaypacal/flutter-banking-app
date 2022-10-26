@@ -1,4 +1,4 @@
-import 'package:banking_app/src/utils/color/color_prop.dart';
+import 'package:banking_app/src/utils/theme/light_theme.dart';
 import 'package:banking_app/src/view/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,6 +7,7 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  final String _appTitle = "Banking App";
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +19,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            appBarTheme: const AppBarTheme(
-              backgroundColor: ColorProp.primaryColor,
-              elevation: 0,
-            ),
-            textTheme: TextTheme(
-              titleLarge: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, height: 1.4),
-              bodyMedium: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w500, color: ColorProp.primaryColor),
-            ),
-          ),
-          title: 'First Method',
+          theme: LightTheme.instance.theme,
+          title: _appTitle,
           home: child,
         );
       },
