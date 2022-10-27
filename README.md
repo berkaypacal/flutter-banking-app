@@ -4,8 +4,8 @@ Banking app
 
 ## Screenshots
 
-![Dashboard](assets/screenshots/ss_dashboard.png?raw=true "Dashboard")
-![Login](assets/screenshots/ss_login.png?raw=true "Login")
+<img src="assets/screenshots/ss_dashboard.png" width="200" height="400" />
+<img src="assets/screenshots/ss_login.png" width="200" height="400" />
 
 ## Design
 
