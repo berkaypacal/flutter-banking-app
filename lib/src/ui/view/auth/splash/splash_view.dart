@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:banking_app/src/ui/router/app_router.gr.dart';
 import 'package:banking_app/src/utils/color/color_prop.dart';
 import 'package:banking_app/src/utils/extensions/image_extension.dart';
 import 'package:banking_app/src/utils/image/image_names.dart';
@@ -8,7 +10,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../components/color_button_component.dart';
+import '../../../components/color_button_component.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
@@ -24,13 +26,7 @@ class SplashView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
-            alignment: Alignment.bottomCenter,
-            width: double.infinity,
-            height: 480.h - kToolbarHeight,
-            decoration: _DecortationProp(),
-            child: Image.asset(ImageNames.splash_mockup.toPng, height: 350.h),
-          ),
+          const _ImageConatiner(),
           Column(
             children: [
               Padding(
@@ -53,7 +49,9 @@ class SplashView extends StatelessWidget {
                 ),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.navigateTo(const LoginRoute());
+                  },
                   child: Text(
                     StringsProps.login,
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -62,6 +60,23 @@ class SplashView extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class _ImageConatiner extends StatelessWidget {
+  const _ImageConatiner({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.bottomCenter,
+      width: double.infinity,
+      height: 480.h - kToolbarHeight,
+      decoration: _DecortationProp(),
+      child: Image.asset(ImageNames.splash_mockup.toPng, height: 350.h),
     );
   }
 }
