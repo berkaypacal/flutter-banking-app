@@ -1,5 +1,5 @@
-import 'package:banking_app/src/utils/theme/light_theme.dart';
-import 'package:banking_app/src/view/splash/splash_view.dart';
+import 'package:banking_app/src/ui/app/router_app.dart';
+import 'package:banking_app/src/ui/view/auth/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,7 +7,6 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  final String _appTitle = "Banking App";
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +16,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: LightTheme.instance.theme,
-          title: _appTitle,
-          home: child,
-        );
+        return const RouterApp();
       },
       child: const SplashView(),
     );
