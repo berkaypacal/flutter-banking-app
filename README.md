@@ -1,16 +1,12 @@
-# banking_app
+# Flutter Banking App
 
-A new Flutter project.
+Banking app
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![Dashboard](assets/screenshots/ss_dashboard.png?raw=true "Dashboard")
+![Login](assets/screenshots/ss_login.png?raw=true "Login")
 
-A few resources to get you started if this is your first Flutter project:
+## Design
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Figma](https://www.figma.com/file/DYOAECeA5pQ8W7t5CxjgwF/Free-UI-Template---Communal-Payments-App-(Community)?node-id=1011%3A4517)
